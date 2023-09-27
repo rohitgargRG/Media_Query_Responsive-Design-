@@ -1,0 +1,75 @@
+$color-1 : #cdb4db; // Mobile
+$color-2 : #fff1e6; // Tablet
+$color-3 : #52b788; // Laptop
+$color-4 : #bee1e6; // Desktop
+// breakpoints for different devices
+$mobile : 576px;
+$tablet : 768px;
+$laptop : 992px;
+$desktop : 1200px;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    body{
+        font-family: sans-serif;
+        font-size: 35px;
+    }
+}
+
+.container{
+    height: 100vh;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    display: grid;
+    place-content: center;
+    background-color: #fff;
+
+}
+.text{
+
+}
+#size{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+}
+
+// defining media query
+// @media screen, (max-width : 768px) and (min-width: 768px) {
+    
+// }
+// refer bootstrap5 website for official screen size
+
+// start from largest screen to smallest screen
+@media (max-width: $desktop){
+    .container{
+        background-color: $color-4;
+    }
+}
+@media (max-width: $laptop){
+    .container{
+        background-color: $color-1;
+    }
+}
+@media (max-width: $tablet){
+    // means when width is more than 768px , apply these 
+    // properties to respenctive sections.
+    .container{
+        background-color: $color-2;
+    }   
+}
+@media (max-width: $mobile){
+    // means when width is less that 768px , then apply these
+    // properties to ollowing sections
+    .container{
+        background-color: $color-3;
+    }   
+}
+

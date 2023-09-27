@@ -1,0 +1,4 @@
+-- try giving responsive font sizes
+-- like in vw.
+
+-- background-size : contain  is highly responsive
